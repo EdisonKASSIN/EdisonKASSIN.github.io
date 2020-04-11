@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Connectes-toi ma chérie</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="index.css">
+
+    <script type="text/javascript">
+        function remplace(){
+            let nom = document.getElementById('your_mail').value;
+            let pass = document.getElementById('your_pass').value;
+
+            if(nom==="Julia" && pass==="edisonkassin"){
+                document.location.href="../../about.html";
+            }
+            else{
+                alert("uniquement pour Julia");
+                document.location.href="signin.html"; 
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <a href="../../index.html">Accueil</a>
+    <div class="main">
+
+        <!-- Sing in  Form -->
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="julia.jpg" alt="sing up image"></figure>
+                    </div>
+
+                    <div class="signin-form">
+                        <h2 class="form-title">Se connecter</h2>
+                        <form method="POST" class="register-form" id="login-form">
+                            <div class="form-group">
+                                <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="your_mail" id="your_mail" placeholder="Your name"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="your_pass" id="your_pass" placeholder="Password"/>
+                            </div>
+                            <div class="form-group form-button">
+                                <button id="signin" class="form-submit" onclick="remplace()">Accéder à la page</button>  
+
+                                <!-- <script type="text/javascript">
+                                    let b3 = document.getElementById('signin');
+                                    b3.addEventListener('click', remplace);
+                                </script> -->
+                                 
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
